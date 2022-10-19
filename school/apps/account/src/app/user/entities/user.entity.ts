@@ -1,5 +1,5 @@
 import {IUser, UserRole} from "../../../../../../libs/interfaces/src/lib/user.interface";
-import {compare, genSalt} from "bcryptjs";
+import {compare, genSalt, hash} from "bcryptjs";
 
 export class UserEntity implements IUser {
   _id: string;
@@ -16,7 +16,7 @@ export class UserEntity implements IUser {
   }
 
   async setPassword(password:string){
-    const salt = genSalt(10)
+    const salt = await genSalt(10)
     this.passwordHash = await hash(password, salt)
     return this
   }
