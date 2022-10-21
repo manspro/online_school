@@ -4,11 +4,13 @@ import {UserRepository} from "../user/repositories/user.repository";
 import {UserEntity} from "../user/entities/user.entity";
 import {UserRole} from "../../../../../libs/interfaces/src/lib/user.interface";
 import {User} from "../user/models/user.model";
+import {JwtService} from "@nestjs/jwt";
 
 @Injectable()
 export class AuthService {
   constructor(
-    private readonly userRepository: UserRepository
+    private readonly userRepository: UserRepository,
+    private readonly jwtService: JwtService
   ) {
   }
 
@@ -41,5 +43,11 @@ export class AuthService {
         throw new Error('Неверный логин или пароль')
       }
       return {id: user._id}
+    }
+
+    async login(id:string){
+      return {
+        access_token: this.jwtService.signAsync({id})
+      }
     }
 }

@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5d1ba77-0f14-4d47-bcc1-43c4e381f2c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/school/apps/account/src/app/congigs/jwt.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school/apps/account/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/school/apps/account/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/school/apps/account/src/app/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/school/apps/account/src/app/auth/auth.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/school/apps/account/src/app/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/school/apps/account/src/app/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/school/apps/account/src/app/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/school/apps/account/src/app/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/apps/account/src/app/user/entities/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/school/apps/account/src/app/user/entities/user.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/apps/account/src/app/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/school/apps/account/src/app/user/user.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school/apps/account/src/app/congigs/mongo.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/school/apps/account/src/app/congigs/mongo.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school/envs/.account.env" beforeDir="false" afterPath="$PROJECT_DIR$/school/envs/.account.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/school/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/school/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/school/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/school/package.json" afterDir="false" />
     </list>
@@ -30,6 +34,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -39,10 +44,31 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/mansur/Desktop/online_school",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
     "ts.external.directory.path": "/Users/mansur/Desktop/online_school/school/node_modules/typescript/lib"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="school.rmq: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="rmq" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="school/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.school.rmq: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,7 +80,7 @@
       <workItem from="1666121228585" duration="1467000" />
       <workItem from="1666127762260" duration="180000" />
       <workItem from="1666127950797" duration="737000" />
-      <workItem from="1666160658862" duration="13546000" />
+      <workItem from="1666160658862" duration="19741000" />
     </task>
     <servers />
   </component>

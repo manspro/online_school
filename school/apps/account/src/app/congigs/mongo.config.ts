@@ -5,7 +5,7 @@ import {ConfigModule, ConfigService} from "@nestjs/config";
 export const getMongoConfig = ():MongooseModuleAsyncOptions => {
   return{
     useFactory: (configService: ConfigService) => ({
-      url: getMongoString(configService)
+      uri: getMongoString(configService)
     }),
     inject: [ConfigService],
     imports: [ConfigModule]
@@ -21,4 +21,6 @@ const getMongoString = (configService: ConfigService) =>
   ':' +
   configService.get('MONGO_PORT') +
   '/' +
+  configService.get('MONGO_DATABASE') +
+  '?authSource=' +
   configService.get('MONGO_AUTHDATABASE');

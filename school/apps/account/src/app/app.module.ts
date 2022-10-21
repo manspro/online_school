@@ -6,7 +6,7 @@ import {MongooseModule} from "@nestjs/mongoose";
 import {getMongoConfig} from "./congigs/mongo.config";
 
 @Module({
-  imports: [ConfigModule.forRoot({isGlobal:true, envFilePath:'envs/.account.env'}),
+  imports: [ConfigModule.forRoot({isGlobal:true, envFilePath: 'envs/.account.env'}),
     UserModule,
     AuthModule,
     MongooseModule.forRootAsync(getMongoConfig())
