@@ -1,4 +1,4 @@
-import {IUser, UserRole} from "../../../../../../libs/interfaces/src/lib/user.interface";
+import {IUser, IUserCourses, UserRole} from "../../../../../../libs/interfaces/src/lib/user.interface";
 import {compare, genSalt, hash} from "bcryptjs";
 
 export class UserEntity implements IUser {
@@ -7,6 +7,7 @@ export class UserEntity implements IUser {
   email: string;
   passwordHash: string;
   role: UserRole;
+  courses?: IUserCourses[]
 
   constructor(user :IUser) {
     this._id = user._id;
@@ -14,6 +15,7 @@ export class UserEntity implements IUser {
     this.displayName = user.displayName;
     this.email = user.email;
     this.role = user.role
+    this.courses = user.courses
   }
 
   async setPassword(password:string){
