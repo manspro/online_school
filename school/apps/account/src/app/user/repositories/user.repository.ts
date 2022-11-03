@@ -17,6 +17,10 @@ export class UserRepository{
     return this.userModel.findOne({email}).exec()
     }
 
+    async findUserById(id: string){
+    return this.userModel.findOne(id).exec()
+    }
+
     async deleteUser(email:string){
      await this.userModel.deleteOne({email}).exec()
     }
