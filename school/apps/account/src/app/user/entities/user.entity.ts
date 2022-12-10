@@ -1,4 +1,4 @@
-import {IUser, IUserCourses, UserRole} from "../../../../../../libs/interfaces/src/lib/user.interface";
+import {IUser, IUserCourses, PurchaseState, UserRole} from "@school/interfaces";
 import {compare, genSalt, hash} from "bcryptjs";
 
 export class UserEntity implements IUser {
@@ -16,6 +16,30 @@ export class UserEntity implements IUser {
     this.email = user.email;
     this.role = user.role
     this.courses = user.courses
+  }
+
+  addCourse(courseId: string) {
+    const exist = this.courses.find(c => c._id === courseId)
+    if (exist) {
+      throw new Error('Такой курс уже существует')
+    }
+    this.courses.push({
+      courseId,
+      purchaseState: PurchaseState.Started
+    })
+  }
+
+  deleteCourse(courseId: string) {
+    this.courses = this.courses.filter(c => c._id !== courseId)
+  }
+
+  updateCourseStatus(courseId: string, state: PurchaseState) {
+    this.courses = this.courses.map(c => {
+      if (c._id === courseId) {
+        c.purchaseState = state;
+        return c;
+      } return c;
+    })
   }
 
   getPublicProfile(){
