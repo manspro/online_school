@@ -11,6 +11,6 @@ export namespace CourseGetCourse {
   }
 
   export class Response {
-    profile: ICourse | null;
+    course: ICourse | null;
   }
 }
